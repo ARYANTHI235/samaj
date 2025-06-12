@@ -58,11 +58,11 @@ const Facilities = () => {
                                             <img
                                                 src={slide.image}
                                                 alt={`facilities-${index}`}
-                                                className='rounded-t-3xl md:rounded-t-none md:rounded-l-3xl'
+                                                className='rounded-tl-3xl rounded-tr-3xl md:rounded-tr-none md:rounded-l-3xl'
                                             />
                                         </div>
                                     </div>
-                                    <div className="w-full md:w-6/12 md:ps-8 flex flex-col justify-center rounded-b-3xl md:rounded-b-none md:rounded-r-3xl bg-[#21252917]">
+                                    <div className="w-full md:w-6/12 md:ps-8 flex flex-col justify-center rounded-b-3xl md:rounded-b-none md:rounded-r-3xl bg-[#FBEAEB]">
                                         <div className="content p-3 text-center md:text-start">
                                             <Link className=' md:text-[20px] lg:text-[24px] xl:text-[30px] font-Secondry'>
                                                 {slide.title}

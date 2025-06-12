@@ -14,7 +14,7 @@ const AboutUs = () => {
 
     return (
         <>
-            <section className='py-[50px] bg-[#1173b942]'>
+            <section className='py-[50px] bg-[#FBEAEB]'>
                 <div className="container">
                     <div className="row">
                         <div className="w-full flex flex-wrap justify-between">

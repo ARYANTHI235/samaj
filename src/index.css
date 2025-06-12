@@ -36,14 +36,21 @@ code {
 .faclities .slick-dots li.slick-active div {
     opacity: 1 !important;
     transform: scale(1.2);
-    background-color: #1173b9;  /* Optional: change color on active */
+    background-color: #990011;  /* Optional: change color on active */
 }
-.faclities .slick-dots{
-  bottom: -65px;
+ .slick-dots{
+  bottom: -65px !important;
 }
 
 .slick-track{
   margin-left: 0 !important;
   margin-right: 0 !important;
   display: flex !important;
+}
+
+.slick-dots li.slick-active div {
+    @apply bg-Primary opacity-100;
+}
+.slick-dots li div {
+    @apply opacity-50;
 }
