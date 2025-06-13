@@ -8,7 +8,7 @@ import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
     return (
         <>
-            <footer className='py-[50px] lg:py-[100px] bg-[#FBEAEB] '>
+            <footer className='py-[50px] lg:py-[100px] bg-[#FBEAEB]'>
                 <div className="container">
                     <div className="row">
                         <div className="w-full flex flex-wrap justify-center lg:justify-start gap-8 lg:gap-0">
@@ -69,7 +69,7 @@ const Footer = () => {
                                             <a href="#" className='hover:text-Primary'>+918238744455</a>
                                         </li>
                                         <li>
-                                            <a href="#" className='hover:text-Primary'>samastpatidarsamajtrust2005@gmail.com</a>
+                                            <a href="#" className='hover:text-Primary'>jayvaghela2422@gmail.com</a>
                                         </li>
                                     </ul>
                                 </div>

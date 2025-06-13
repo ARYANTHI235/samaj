@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from 'react-i18next';
 
 const Facilities = () => {
+    const { t } = useTranslation();
 
     const settings = {
         dots: true,
@@ -31,13 +33,13 @@ const Facilities = () => {
     const slides = [
         {
             image: facilites,
-            title: "Skill Development Centre",
-            description: "By Samast Patidar Samaj Trust Mrs. M.M. A skill development center is run at Kheni Bhavan for self-reliance and self-reliance of the sisters."
+            title: t('facilities-title1'),
+            description: t('facilities-paragraf1'),
         },
         {
             image: facilites,
-            title: "Another Facility",
-            description: "Description of another facility here..."
+            title: t('facilities-title2'),
+            description: t('facilities-paragraf2')
         }
     ];
 
@@ -47,8 +49,8 @@ const Facilities = () => {
                 <div className="container">
                     <div className="row">
                         <div className="heading text-center mb-8">
-                            <h6 className='font-Primary text-[16px] sm:text-[20px] xl:text-[22px] font-semibold italic text-Primary'>Our Facilities</h6>
-                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>Our Popular Facility</h2>
+                            <h6 className='font-Primary text-[16px] sm:text-[20px] xl:text-[22px] font-semibold italic text-Primary'>{t('facilities-heading1')}</h6>
+                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>{t('facilities-heading2')}</h2>
                         </div>
                          <Slider {...settings} className="w-full">
                             {slides.map((slide, index) => (
@@ -77,7 +79,7 @@ const Facilities = () => {
                                                 >
                                                     <span className="absolute inset-0 bg-Primary transform translate-x-full transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
                                                     <span className="text-[14px] lg:text-[16px] relative z-10 text-Primary group-hover:text-white transition-colors duration-300 ease-in-out">
-                                                        Read More
+                                                       {t('about-btn')}
                                                     </span>
                                                 </Link>
                                             </div>

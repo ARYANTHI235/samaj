@@ -35,7 +35,8 @@ module.exports = {
       backgroundImage:{
         banner1: "url('/src/assets/banner1.jpg')",
         banner2: "url('/src/assets/banner2.png')",
-        banner3: "url('/src/assets/banner3.webp')"
+        banner3: "url('/src/assets/banner3.webp')",
+        cuverImage: "url('/src/assets/rotten-curve-1.png')",
       },
       keyframes:{
         zoomIn:{

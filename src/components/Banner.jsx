@@ -4,6 +4,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { GoArrowRight, GoArrowLeft  } from "react-icons/go";
+import { useTranslation } from 'react-i18next';
 
 
 const NextArrow = (props) => {
@@ -30,32 +31,12 @@ const PrevArrow = (props) => {
     )
 }
 
-const slides = [
-    {
-        bgClass: 'bg-banner1',
-        heading: 'Samast Patidar Samaj Trust',
-        subHeading: 'Since 2004 in continuous service to society',
-        buttonText: 'Login / Registration',
-        buttonLink: '/login'
-    },
-    {
-        bgClass: 'bg-banner2',
-        heading: 'Empowering Communities',
-        subHeading: 'Join our initiatives for social development',
-        buttonText: 'Learn More',
-        buttonLink: '/learn-more'
-    },
-    {
-        bgClass: 'bg-banner3',
-        heading: 'Empowering Communities',
-        subHeading: 'Join our initiatives for social development',
-        buttonText: 'Learn More',
-        buttonLink: '/learn-more'
-    }
-];
+
 
 
 const Banner = () => {
+    const { t } = useTranslation();
+    
     const settings = {
         infinite: true,
         speed: 300,
@@ -66,6 +47,30 @@ const Banner = () => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
     }
+
+    const slides = [
+    {
+        bgClass: 'bg-banner1',
+        heading: t('banner-heading1'),
+        subHeading: t('sub-heading1'),
+        buttonText: t('login-registration'),
+        buttonLink: '/'
+    },
+    {
+        bgClass: 'bg-banner2',
+        heading: t('banner-heading2'),
+        subHeading: t('sub-heading2'),
+        buttonText: t('login-registration'),
+        buttonLink: '/'
+    },
+    {
+        bgClass: 'bg-banner3',
+        heading: t('banner-heading2'),
+        subHeading: t('sub-heading2'),
+        buttonText: t('login-registration'),
+        buttonLink: '/'
+    }
+];
 
     return (
         <section className='overflow-hidden relative h-[90vh]'>
