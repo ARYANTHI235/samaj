@@ -1,14 +1,16 @@
 import React from 'react'
 import CountUp from 'react-countup'
+import { useTranslation } from 'react-i18next'; 
 
 const Count = () => {
+    const { t } = useTranslation();
 
     const data = [
-        { number: 11960, label: "Total Event" },
-        { number: 1265, label: "Education Fund" },
-        { number: 29502, label: "Government Guidance Centre" },
-        { number: 1230, label: "UPSC / GPSC" },
-        { number: 6460, label: "Occasional Building Facilities" },
+        { number: t('number1'), label: t('label1') },
+        { number: t('number2'), label: t('label2') },
+        { number: t('number3'), label: t('label3') },
+        { number: t('number4'), label: t('label4') },
+        { number: t('number5'), label: t('label5') },
     ];
 
     return (

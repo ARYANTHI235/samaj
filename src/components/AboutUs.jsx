@@ -8,12 +8,12 @@ import { useTranslation } from 'react-i18next';
 const AboutUs = () => {
      const { t } = useTranslation();
 
-    const boxes = [
-        { icon: <FaRegUser className='text-[30px]' />, title: t('about-title1') },
-        { icon: <PiHandHeartLight className='text-[30px]' />, title: t('about-title2') },
-        { icon: <CiDollar className='text-[30px]' />, title: t('about-title3') },
-        { icon: <FaRegHeart className='text-[30px]' />, title: t('about-title4') }
-    ];
+   const boxes = [
+              { icon: <FaRegUser className='text-[30px]' />, title: t('about-title1') },
+              { icon: <PiHandHeartLight className='text-[30px]' />, title: t('about-title2') },
+              { icon: <CiDollar className='text-[30px]' />, title: t('about-title3') },
+              { icon: <FaRegHeart className='text-[30px]' />, title: t('about-title4') }
+          ];
 
     return (
         <>

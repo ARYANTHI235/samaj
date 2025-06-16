@@ -6,10 +6,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { IoSearch, IoMail } from "react-icons/io5";
 import { FaPhoneAlt, FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Logo.png";
-import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from "./LanguageSwitcher";
-
-
+import { useTranslation } from 'react-i18next'; 
 
 const Header = () => {
     const [language, setLanguage] = useState("en");
@@ -19,38 +16,30 @@ const Header = () => {
     const { t, i18n } = useTranslation();
     const location = useLocation();
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     useEffect(() => {
-        const addGoogleTranslate = () => {
-            if (!document.getElementById("google-translate-script")) {
-                const script = document.createElement("script");
-                script.id = "google-translate-script";
-                script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-                document.body.appendChild(script);
-
-                window.googleTranslateElementInit = () => {
-                    new window.google.translate.TranslateElement(
-                        {
-                            pageLanguage: "en",
-                            includedLanguages: "en,gu",
-                            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
-                        },
-                        "google_translate_element"
-                    );
-                };
-            }
-        };
-
-        addGoogleTranslate();
+        const storedLang = localStorage.getItem("language");
+        if (storedLang) setLanguage(storedLang);
     }, []);
 
+    const toggleSubmenu = (label) => {
+        setSubmenuOpen((prev) => ({ ...prev, [label]: !prev[label] }));
+    };
 
-     const menuItems = [
+    const isActive = (path) => {
+        return location.pathname === path;
+    };
+
+    const menuItems = [
         {
             label: t('executive-committee'),
             subItems: [
-                { label: t('chairperson'), link: '/' },
-                { label: t('vice-chairperson'), link: '/' },
-                { label: t('treasurer'), link: '/' }
+                { label: t('officers'), link: '/officers-of-the-executive-committee' },
+                { label: t('members'), link: '/members-of-the-executive-committee' },
+                { label: t('trustees'), link: '/trustees' }
             ]
         },
         {
@@ -60,40 +49,31 @@ const Header = () => {
         {
             label: t('our-facilities'),
             subItems: [
-                { label: t('library'), link: '/' },
-                { label: t('sports-complex'), link: '/' }
+                { label: t('government'), link: '/government-scheme-guidance-centre' },
+                { label: t('skill'), link: '/skill-development-centre' },
+                { label: t('reading'), link: '/' },
+                { label: t('upsc/gpsc'), link: '/' },
+                { label: t('education'), link: '/' },
+                { label: t('occasional'), link: '/' },
             ]
         },
         {
             label: t('more'),
             subItems: [
                 { label: t('events'), link: '/' },
-                { label: t('news'), link: '/' }
+                { label: t('news&articles'), link: '/' },
+                { label: t('gallery'), link: '/' },
+                { label: t('contactus'), link: '/' },
             ]
         },
         {
-            label: <LanguageSwitcher />,
+            label: t('language1'),
+            subItems: [
+                { label: t('language1'), action: () => changeLanguage('en') },
+                { label: t('language2'), action: () => changeLanguage('gu') }
+            ]
         }
     ];
-
-
-   useEffect(() => {
-    const storedLang = localStorage.getItem("language");
-    if (storedLang) setLanguage(storedLang);
-  }, []);
-
- const handleLanguageChange = (lng) => {
-        i18n.changeLanguage(lng);
-    };
-
-  const toggleSubmenu = (label) => {
-    setSubmenuOpen((prev) => ({ ...prev, [label]: !prev[label] }));
-  };
-
-  const isActive = (path) => {
-  return location.pathname === path;
-};
-
 
     return (
         <>
@@ -154,17 +134,17 @@ const Header = () => {
                         >
                             ✕
                         </button>
-                        <h2 className='text-center text-xl font-semibold mb-4'>Search</h2>
+                        <h2 className='text-center text-xl font-semibold mb-4'>{t('Search')}</h2>
                         <input
                             type="text"
-                            placeholder="Search..."
+                            placeholder={t('placeholder-Search')}
                             className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none"
                         />
                     </div>
                 </div>
 
 
-                <div className="header py-4">
+                <div className="header py-4 shadow-xl shadow-custom sticky top-0 z-50">
                     <div className="container">
                         <div className="row">
                             <div className="w-full flex items-center justify-between">
@@ -178,7 +158,7 @@ const Header = () => {
                                         {menuItems.map((item, idx) => (
                                             <li key={idx} className="relative group transition-all duration-300">
                                                 {item.subItems ? (
-                                                    <>
+                                                    <>  
                                                         <Link className="flex items-center gap-1">
                                                             {item.label}
                                                             <FaAngleDown />
@@ -186,9 +166,9 @@ const Header = () => {
                                                         <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg opacity-0 scale-y-0 origin-top transform transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-100">
                                                             {item.subItems.map((sub, subIdx) => (
                                                                 <li key={subIdx} className="px-4 py-2 hover:bg-gray-100">
-                                                                    {sub.label === "English" || sub.label === "Gujarati" ? (
+                                                                    {sub.action ? (
                                                                         <button
-                                                                            onClick={() => handleLanguageChange(sub.label === "English" ? "en" : "gu")}
+                                                                            onClick={sub.action}
                                                                             className="w-full text-left"
                                                                         >
                                                                             {sub.label}
@@ -253,7 +233,6 @@ const Header = () => {
                                                                     <li key={subIdx}>
                                                                         {sub.label === "English" || sub.label === "Gujarati" ? (
                                                                             <button
-                                                                                onClick={() => handleLanguageChange(sub.label === "English" ? "en" : "gu")}
                                                                                 className="w-full text-left py-2 border-b border-gray-200"
                                                                             >
                                                                                 {sub.label}

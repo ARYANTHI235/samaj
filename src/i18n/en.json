@@ -1,17 +1,27 @@
 {
   "executive-committee": "Executive Committee",
-  "chairperson": "Chairperson",
-  "vice-chairperson": "Vice-Chairperson",
-  "treasurer": "Treasurer",
+  "officers": "Officers of the Executive Committee",
+  "members": "Members of the Executive Committee",
+  "trustees": "Trustees",
+  "Search":"Search",
+  "placeholder-Search":"Search",
 
   "about": "About Us",
   "our-facilities": "Our Facilities",
-  "library": "Library",
-  "sports-complex": "Sports Complex",
+  "government": "Government Scheme Guidance Centre",
+  "skill": "Skill Development Center",
+  "reading": "Reading room",
+  "upsc/gpsc": "UPSC | GPSC Training Centre",
+  "education": "Education Fund",
+  "occasional": "Occasional building facilities",
+  "language1":"English",
+  "language2":"Gujrati",
 
   "more": "More",
   "events": "Events",
-  "news": "News",
+  "news&articles": "News & Articles",
+  "gallery": "Gallery",
+  "contactus": "Contact Us",
 
   "login-reg": "Login / Reg.",
 
@@ -42,5 +52,94 @@
    "facilities-title1":"Skill Development Centre",
    "facilities-title2":"Another Facility",
    "facilities-paragraf1":"By Samast Patidar Samaj Trust Mrs. M.M. A skill development center is run at Kheni Bhavan for self-reliance and self-reliance of the sisters.",
-   "facilities-paragraf2":"Description of another facility here..."
+   "facilities-paragraf2":"Description of another facility here...",
+   
+
+   "Team-heading1":"Meet Our Team",
+   "Team-heading2":"Officers of the Executive Committee",
+   "Team-heading3":"Members of the Executive Committee",
+   "Team-heading4":"Trustees",
+   "Team-btn":"Know More",
+   "Team-name1":"Mr. Veljibhai M. Sheta",
+   "Team-role1":"President",
+
+   "mission-title":"Our Mission",
+   "mission-content":"Our mission is to make the world a better place for everyone. Everyone has their rights equally and we want to make sure that people can get food, education, treatment and accommodation for everyone who is living in poverty.",
+
+   "vision-title":"Our Vision",
+   "vision-content":"In 2030 we want to see our organization in that position where we can see that only 10 percent people are living under poverty and in 2040 no people will be living under poverty around the world.",
+
+   "values-title":"Our Values",
+   "values-content":"Only poor people and the people who are working with us will know the value of us. We do not believe in talk we believe in work. So help the poor make the world valuable for all. Make world a good place for them.",
+
+   "Team-heading":"Our Team",
+   "Team-subheading":"Members of the Executive Committee",
+
+   "Team-member1":"Mr. Laljibhai T. Patel",
+
+    "Event-heading":"All Events",
+   "Event-subheading":"Our Past Events",
+
+   "Event-title1":"Aatmanirbhar exhibition",
+   "Event-description1":"A two-day self-sustaining exhibition has begun A two-day Atmanirbhar […]",
+
+   "Event-title2":"Another Facility",
+   "Event-description2":"Description of another facility here...",
+
+   "Event-btn":"Read More",
+   
+   "Future-event":"Our Future Events",
+
+   "Footer-paragraf":"Love us a trusted name for helping the poor who are neglected and affected. Love us started their journey in 2010. Our slogan is “ Save the poor and make the world happy”.",
+
+   "Footer-heading":"Services",
+   "Footer-heading2":"Contacts",
+
+   "Footer-encer1":"Executive Committee",
+   "Footer-encer2":"About Us",
+   "Footer-encer3":"Contact Us",
+   "Footer-encer4":"Our Facilities",
+   "Footer-encer5":"Events",
+   "Footer-encer6":"News & Articles",
+   "Footer-adrees":"Smt M.N.Kheni Bhavan, Opposite Ankur School, Ambatlavdi, Katargam, Surat",
+
+   "copyright-description":"© 2024 Samast Patidar Samaj Trust, All Rights Reserved. Developed and Designed By",
+   "copyright-name1":"RIOFOS",
+   "copyright-name2":"Terms of Service",
+   "copyright-name3":"Privacy Policy",
+
+   "aboutus-mainheading":"About Us",
+
+   "number1":"11960",
+   "label1":"Total Event",
+   "number2":"1265",
+   "label2":"Education Fund",
+   "number3":"29502",
+   "label3":"Government Guidance Centre",
+   "number4":"1230",
+   "label4":"UPSC / GPSC",
+   "number5":"6460",
+   "label5":"Occasional Building Facilities",
+
+   "whatwedo-heading1":"what we do?",
+   "whatwedo-heading2":"We’re On A Mission To Solve The Problems",
+   "whatwedo-description":"Shrimati Maniben Mohanbhai Kheni Bhawan was constructed by our trust for the economic, social, educational and professional development of the entire Patidar community.",
+
+   "slide-title1":"Government Scheme Guidance Centre",
+
+   "government-paragraf1":"For the social and economic development of the common class, the government runs various welfare schemes. The Government has a noble intention to reach the needy families who are the most marginalized people in the society. Despite the good intentions of the government, due to ignorance of the scheme, when the needy families are unable to directly benefit from the scheme, they take advantage of the middlemen who exploit the poor families financially.",
+   "government-paragraf2":"Samast Patidar Samaj Trust, Surat is running Government Scheme Guidance Center with full staff under the leadership of Ex-Minister(R.K) Mr. Nanubhai Vanani to ensure that the needy families get the free benefits of all government schemes in simple and straightforward language. So that the economic exploitation of the poor family stops and the evil of the middlemen is removed.",
+   "government-paragraf3":"In this guidance center, not only the guidance of all the schemes of India and the state government, but also the society does all kinds of procedures for filling the off and online forms of the schemes till the amount of the scheme is approved. Suffice it to say about the functioning of this guidance center that it does not stop at just pointing the finger towards the scheme but also holds the finger of the beneficiary and leads to the benefits of the scheme. Due to the above noble work of the society, not only Surat but people of all classes and communities of Gujarat without any caste caste discrimination flock to this guidance center to take advantage of the government schemes.",
+
+   "government-heading":"Name of Scheme",
+
+   "government-subheading1":"Country Loan",
+   "government-subheading2":"Educational Loans",
+   "government-subheading3":"Kunvarbai Mameru",
+   "government-subheading4":"Human Garima",
+   "government-subheading5":"Navodaya Yojana",
+
+   "government-adress":"Venue- Smt. MM Kheni Bhavan, Ambatlavadi, Katargam, Surat, managed by Samast Patidar Samaj Trust. Contact Mobile Number:- Office",
+   "government-nomber":"( 8238644455 )"
+
 }

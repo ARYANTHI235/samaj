@@ -5,6 +5,7 @@ import Teammamber1 from '../assets/team1.jpeg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GoArrowRight, GoArrowLeft  } from "react-icons/go";
+import { useTranslation } from 'react-i18next'; 
 
 const NextArrow = (props) => {
      const { onClick } = props
@@ -31,33 +32,34 @@ const PrevArrow = (props) => {
 }
 
 const OurTeam = () => {
+    const { t } = useTranslation();
 
      const teamMembers2 = [
-        {
-            name: 'Mr. Laljibhai T. Patel',
-            image: Teammamber1,
-        },
-        {
-            name: 'Mr. Laljibhai T. Patel',
-            image: Teammamber1,
-        },
-        {
-            name: 'Mr. Laljibhai T. Patel',
-            image: Teammamber1,
-        },
-        {
-            name: 'Mr. Laljibhai T. Patel',
-            image: Teammamber1,
-        },
-        {
-            name: 'Mr. Laljibhai T. Patel',
-            image: Teammamber1,
-        },
-        {
-            name: 'Mr. Laljibhai T. Patel',
-            image: Teammamber1,
-        },
-    ];
+            {
+                name: t('Team-member1'),
+                image: Teammamber1,
+            },
+            {
+                name: t('Team-member1'),
+                image: Teammamber1,
+            },
+            {
+                name: t('Team-member1'),
+                image: Teammamber1,
+            },
+            {
+                name: t('Team-member1'),
+                image: Teammamber1,
+            },
+            {
+                name: t('Team-member1'),
+                image: Teammamber1,
+            },
+            {
+                name: t('Team-member1'),
+                image: Teammamber1,
+            },
+        ];
 
      const settings = {
         dots: false,
@@ -95,8 +97,8 @@ const OurTeam = () => {
                 <div className="container">
                     <div className="row">
                         <div className="heading text-center mb-4 md:mb-8">
-                            <h6 className='font-Primary text-[16px] sm:text-[20px] xl:text-[22px] font-semibold italic text-Primary'>Our Team</h6>
-                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>Members of the Executive Committee</h2>
+                            <h6 className='font-Primary text-[16px] sm:text-[20px] xl:text-[22px] font-semibold italic text-Primary'>{t('Team-heading')}</h6>
+                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>{t('Team-subheading')}</h2>
                             <div className="btn mt-4">
                                 <Link
                                     className="relative overflow-hidden border border-Primary text-Primary font-semibold tracking-wider leading-none rounded-full px-4 lg:px-8 py-2 lg:py-4 inline-block group"
@@ -104,7 +106,7 @@ const OurTeam = () => {
                                 >
                                     <span className="absolute inset-0 bg-Primary transform translate-x-full transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
                                     <span className=" text-[14px] lg:text-[16px] relative z-10 text-Primary group-hover:text-white transition-colors duration-300 ease-in-out">
-                                        Know More
+                                        {t('Team-btn')}
                                     </span>
                                 </Link>
                             </div>

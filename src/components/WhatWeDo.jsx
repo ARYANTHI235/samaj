@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import { FaRegUser, FaRegHeart } from 'react-icons/fa';
 import { CiDollar } from 'react-icons/ci';
 import { PiHandHeartLight } from 'react-icons/pi';
+import { useTranslation } from 'react-i18next'; 
 
 const WhatWeDo = () => {
+    const { t } = useTranslation();
      const boxes = [
-            { icon: <FaRegUser className='text-[30px]' />, title: 'Social' },
-            { icon: <PiHandHeartLight className='text-[30px]' />, title: 'Educational' },
-            { icon: <CiDollar className='text-[30px]' />, title: 'Economic' },
-            { icon: <FaRegHeart className='text-[30px]' />, title: 'Self-Sufficient' }
+            { icon: <FaRegUser className='text-[30px]' />, title: t('about-title1') },
+            { icon: <PiHandHeartLight className='text-[30px]' />, title: t('about-title2') },
+            { icon: <CiDollar className='text-[30px]' />, title: t('about-title3') },
+            { icon: <FaRegHeart className='text-[30px]' />, title: t('about-title4') }
         ];
 
   return (
@@ -20,13 +22,13 @@ const WhatWeDo = () => {
                         <div className="w-full flex flex-wrap justify-between">
                             <div className="w-full lg:w-6/12 text-center lg:text-start">
                                 <h5 className='font-Primary text-[16px] sm:text-[20px] xl:text-[22px] font-semibold italic text-Primary'>
-                                    what we do?
+                                    {t('whatwedo-heading1')}
                                 </h5>
                                 <h2 className='font-Secondry text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px]'>
-                                    We’re On A Mission To Solve The Problems
+                                    {t('whatwedo-heading2')}
                                 </h2>
                                 <p className='font-Primary text-[14px] sm:text-[16px]'>
-                                    Shrimati Maniben Mohanbhai Kheni Bhawan was constructed by our trust for the economic, social, educational and professional development of the entire Patidar community.
+                                   {t('whatwedo-description')}
                                 </p>
                                 <div className="btn mt-4">
                                     <Link
@@ -35,7 +37,7 @@ const WhatWeDo = () => {
                                     >
                                         <span className="absolute inset-0 bg-Primary transform translate-x-full transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
                                         <span className="relative z-10 text-Primary group-hover:text-white transition-colors duration-300 ease-in-out">
-                                            Read More
+                                            {t('about-btn')}
                                         </span>
                                     </Link>
                                 </div>

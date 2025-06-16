@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from 'react-i18next';
 
 
 const Events = () => {
+    const { t } = useTranslation();
 
      const settings = {
         dots: true,
@@ -33,13 +35,13 @@ const Events = () => {
      const slides = [
         {
             image: award,
-            title: "Aatmanirbhar exhibition",
-            description: "A two-day self-sustaining exhibition has begun A two-day Atmanirbhar […]"
+            title: t('Event-title1'),
+            description: t('Event-description1')
         },
         {
             image: award1,
-            title: "Another Facility",
-            description: "Description of another facility here..."
+            title: t('Event-title2'),
+            description: t('Event-description2')
         }
     ];
 
@@ -49,8 +51,8 @@ const Events = () => {
                 <div className="container">
                     <div className="row">
                         <div className="heading text-center mb-4 md:mb-8">
-                            <h6 className='font-Primary text-[16px] sm:text-[20px] xl:text-[22px] font-semibold italic text-Primary'>All Events</h6>
-                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>Our Past Events</h2>
+                            <h6 className='font-Primary text-[16px] sm:text-[20px] xl:text-[22px] font-semibold italic text-Primary'>{t('Event-heading')}</h6>
+                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>{t('Event-subheading')}</h2>
                         </div>
                         <Slider {...settings} className="w-full">
                             {slides.map((slide, index) => (
@@ -80,7 +82,7 @@ const Events = () => {
                                                 >
                                                     <span className="absolute inset-0 bg-Primary transform translate-x-full transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
                                                     <span className="text-[14px] lg:text-[16px] relative z-10 text-Primary group-hover:text-white transition-colors duration-300 ease-in-out">
-                                                        Read More
+                                                       {t('Event-btn')}
                                                     </span>
                                                 </Link>
                                             </div>
@@ -96,7 +98,7 @@ const Events = () => {
                 <div className="container">
                     <div className="row">
                          <div className="heading text-center ">
-                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>Our Future Events</h2>
+                            <h2 className='text-[22px] sm:text-[36px] lg:text-[50px] xl:text-[60px] font-Secondry'>{t('Future-event')}</h2>
                         </div>
                     </div>
                 </div>

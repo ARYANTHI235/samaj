@@ -47,6 +47,9 @@ module.exports = {
       animation: {
         'zoom-in': 'zoomIn 15s ease-in-out infinite',
       },
+      boxShadow:{
+        custom: '0 15px 30px rgba(255, 255, 255, 0.30), 0 10px 10px rgba(255, 255, 255, 0.22)',
+      }
     },
   },
   plugins: [],
