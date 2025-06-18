@@ -5,7 +5,7 @@ const AboutAccodian = () => {
   const { t } = useTranslation();
   return (
     <>
-        <section className='relative py-[150px] bg-banner2 bg-cover bg-bottom bg-no-repeat bg-blend-darken bg-[#00000091] before:absolute before:top-[370px] before:left-0 before:w-full before:h-full before:bg-cuverImage before:bg-contain before:bg-no-repeat before:bg-blend-darken '>
+        <section className='relative py-[150px] bg-banner3 bg-cover bg-bottom bg-no-repeat bg-blend-darken bg-[#00000091] before:absolute before:top-[370px] before:left-0 before:w-full before:h-full before:bg-cuverImage before:bg-contain before:bg-no-repeat before:bg-blend-darken '>
             <div className="container">
                 <div className="row">
                       <div className="content text-center">

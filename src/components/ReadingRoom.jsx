@@ -2,10 +2,9 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Government1 from '../assets/government1.jpg'
-import Government2 from '../assets/goverment2.jpg'
-import skill1 from '../assets/skill.jpeg'
-import skill2 from '../assets/skill1.jpeg'
+import reading1 from '../assets/reding.png'
+import reading2 from '../assets/reding2.png'
+import qrcode from '../assets/qr_code.jpeg'
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import { useTranslation } from 'react-i18next';
 
@@ -33,10 +32,21 @@ const PrevArrow = (props) => {
     )
 }
 
-
-const SkillDevelopmentCenter = () => {
-
+const ReadingRoom = () => {
     const { t } = useTranslation();
+
+    const slides = [
+        {
+            id: 1,
+            image: reading1,
+            title: t('slide-title3')
+        },
+        {
+            id: 1,
+            image: reading2,
+            title: t('slide-title3')
+        },
+    ];
 
     const settings = {
         dots: false,
@@ -49,106 +59,6 @@ const SkillDevelopmentCenter = () => {
         prevArrow: <PrevArrow />
     };
 
-    const slides = [
-        {
-            id: 1,
-            image: Government1,
-            title: t('slide-title2')
-        },
-        {
-            id: 1,
-            image: Government2,
-            title: t('slide-title2')
-        },
-    ];
-
-    const skills = [
-        {
-            image: skill1,
-            title: t('skill-title1'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-       
-    ];
 
     const videoUrls = [
         "https://www.youtube.com/embed/2QjfpyxwTMI?si=8IVb8po3vKaaDxR5",
@@ -186,24 +96,10 @@ const SkillDevelopmentCenter = () => {
                             <div className="content font-Primary">
                                 <p className='mb-4'>{t('skill-paragraf')}</p>
                                 <span>{t('government-adress')} <a href="#" className='text-Primary'>{t('government-nomber')}</a></span>
-
-                                <div className="w-full mt-6 flex flex-wrap">
-                                    {skills.map((skill, index) => (
-                                        <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-2/12" key={index}>
-                                            <div className="my-3 mx-2">
-                                                <div className="image">
-                                                    <img src={skill.image} alt="skill" className="w-[350px] sm:w-[300px] md:w-[220px] h-[200px] object-cover" />
-                                                </div>
-                                                <div className="content font-Primary text-center sm:text-start">
-                                                    <h3 className="text-[25px] my-2">{skill.title}</h3>
-                                                    <p className="text-[14px]">{skill.duration}</p>
-                                                    <p className="text-[14px]">{skill.desc1}</p>
-                                                    <p className="text-[14px]">{skill.desc2}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
+                                <p>{t('reading-paragraf')} <a href="#" className='text-Primary'>{t('reading-encer')}</a></p>
+                                    <div>
+                                        <img src={qrcode} alt="qrcode" className='w-full md:w-[250px] h-full  md:h-[250px]' />
+                                    </div>
                                 <div className="w-full mt-10 px-4">
                                     <div className="flex flex-wrap -mx-3 justify-center">
                                         {videoUrls.map((url, index) => (
@@ -232,4 +128,4 @@ const SkillDevelopmentCenter = () => {
     )
 }
 
-export default SkillDevelopmentCenter
+export default ReadingRoom

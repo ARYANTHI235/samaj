@@ -2,10 +2,8 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Government1 from '../assets/government1.jpg'
-import Government2 from '../assets/goverment2.jpg'
-import skill1 from '../assets/skill.jpeg'
-import skill2 from '../assets/skill1.jpeg'
+import UpscGpsc1 from '../assets/upsc-gpsc.png'
+import UpscGpsc2 from '../assets/upsc-gpsc2.png'
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import { useTranslation } from 'react-i18next';
 
@@ -34,9 +32,22 @@ const PrevArrow = (props) => {
 }
 
 
-const SkillDevelopmentCenter = () => {
+const UpscGpscTraningCenter = () => {
 
     const { t } = useTranslation();
+
+    const slides = [
+        {
+            id: 1,
+            image: UpscGpsc1,
+            title: t('slide-title4')
+        },
+        {
+            id: 1,
+            image: UpscGpsc2,
+            title: t('slide-title4')
+        },
+    ];
 
     const settings = {
         dots: false,
@@ -49,108 +60,7 @@ const SkillDevelopmentCenter = () => {
         prevArrow: <PrevArrow />
     };
 
-    const slides = [
-        {
-            id: 1,
-            image: Government1,
-            title: t('slide-title2')
-        },
-        {
-            id: 1,
-            image: Government2,
-            title: t('slide-title2')
-        },
-    ];
-
-    const skills = [
-        {
-            image: skill1,
-            title: t('skill-title1'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-        {
-            image: skill2,
-            title: t('skill-title2'),
-            duration: t('skill-duration1'),
-            desc1: t('skill-desc1'),
-            desc2: t('skill-desc2'),
-        },
-       
-    ];
-
-    const videoUrls = [
+     const videoUrls = [
         "https://www.youtube.com/embed/2QjfpyxwTMI?si=8IVb8po3vKaaDxR5",
         "https://www.youtube.com/embed/kpWjfaplPE0?si=gobh7BGqlp1ijWsC",
         "https://www.youtube.com/embed/eHOcSu_mtFg?si=2iiQRvC8HZTfDIp3",
@@ -158,6 +68,7 @@ const SkillDevelopmentCenter = () => {
         "https://www.youtube.com/embed/6Td0zvi-mfE?si=VN2yWMoXYQKuv4Sy",
         "https://www.youtube.com/embed/KHYXbmtbCJg?si=OLOKsJt_OqsEAYx0"
     ];
+
 
     return (
         <>
@@ -184,26 +95,11 @@ const SkillDevelopmentCenter = () => {
                                 </Slider>
                             </div>
                             <div className="content font-Primary">
-                                <p className='mb-4'>{t('skill-paragraf')}</p>
-                                <span>{t('government-adress')} <a href="#" className='text-Primary'>{t('government-nomber')}</a></span>
-
-                                <div className="w-full mt-6 flex flex-wrap">
-                                    {skills.map((skill, index) => (
-                                        <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-2/12" key={index}>
-                                            <div className="my-3 mx-2">
-                                                <div className="image">
-                                                    <img src={skill.image} alt="skill" className="w-[350px] sm:w-[300px] md:w-[220px] h-[200px] object-cover" />
-                                                </div>
-                                                <div className="content font-Primary text-center sm:text-start">
-                                                    <h3 className="text-[25px] my-2">{skill.title}</h3>
-                                                    <p className="text-[14px]">{skill.duration}</p>
-                                                    <p className="text-[14px]">{skill.desc1}</p>
-                                                    <p className="text-[14px]">{skill.desc2}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
+                                <p className='mb-4 text-[14px] md:text-[16px]'>{t('Upsc-Gpsc-paragraf')}</p>
+                                <p className='mb-4 text-[14px] md:text-[16px]'>{t('upsc-gpscNote')}</p>
+                                <span className='text-[14px] md:text-[16px]'>{t('government-adress')} </span>
+                                <p className='mb-2 mt-2 text-[14px] md:text-[16px]'>{t('upsc-gpscName1')} <a href="#" className='text-Primary'>{t('upsc-gpscnumber1')}</a></p>
+                                <p className='mb-2 text-[14px] md:text-[16px]'>{t('upsc-gpscName2')} <a href="#" className='text-Primary'>{t('upsc-gpscnumber2')}</a></p>
                                 <div className="w-full mt-10 px-4">
                                     <div className="flex flex-wrap -mx-3 justify-center">
                                         {videoUrls.map((url, index) => (
@@ -232,4 +128,4 @@ const SkillDevelopmentCenter = () => {
     )
 }
 
-export default SkillDevelopmentCenter
+export default UpscGpscTraningCenter

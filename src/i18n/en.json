@@ -19,6 +19,8 @@
 
   "more": "More",
   "events": "Events",
+  "past-events":"Past Events",
+  "future-events":"Future Events",
   "news&articles": "News & Articles",
   "gallery": "Gallery",
   "contactus": "Contact Us",
@@ -126,12 +128,21 @@
    "whatwedo-description":"Shrimati Maniben Mohanbhai Kheni Bhawan was constructed by our trust for the economic, social, educational and professional development of the entire Patidar community.",
 
    "slide-title1":"Government Scheme Guidance Centre",
+   "slide-title2":"Skill Development Centre",
+   "slide-title3":"Reading room",
+   "slide-title4":"UPSC / GPSC Training Centre",
+   "slide-title5":"Education Fund",
+   "slide-title6":"Occasional building facilities",
 
    "government-paragraf1":"For the social and economic development of the common class, the government runs various welfare schemes. The Government has a noble intention to reach the needy families who are the most marginalized people in the society. Despite the good intentions of the government, due to ignorance of the scheme, when the needy families are unable to directly benefit from the scheme, they take advantage of the middlemen who exploit the poor families financially.",
    "government-paragraf2":"Samast Patidar Samaj Trust, Surat is running Government Scheme Guidance Center with full staff under the leadership of Ex-Minister(R.K) Mr. Nanubhai Vanani to ensure that the needy families get the free benefits of all government schemes in simple and straightforward language. So that the economic exploitation of the poor family stops and the evil of the middlemen is removed.",
    "government-paragraf3":"In this guidance center, not only the guidance of all the schemes of India and the state government, but also the society does all kinds of procedures for filling the off and online forms of the schemes till the amount of the scheme is approved. Suffice it to say about the functioning of this guidance center that it does not stop at just pointing the finger towards the scheme but also holds the finger of the beneficiary and leads to the benefits of the scheme. Due to the above noble work of the society, not only Surat but people of all classes and communities of Gujarat without any caste caste discrimination flock to this guidance center to take advantage of the government schemes.",
+   "government-paragraf4":"By Samast Patidar Samaj Trust Mrs. M.M. A skill development center is run at Kheni Bhavan for self-reliance and self-reliance of the sisters. In which basic and advanced courses of beauty parlour, mehndi, sewing and nail art are conducted for sisters of all castes without any caste discrimination at a very nominal fee. In this class, training is provided by highly experienced teacher sisters from 1 pm to 5 pm which is a suitable time for each sister.",
+   "skill-paragraf":"By Samast Patidar Samaj Trust Mrs. M.M. A skill development center is run at Kheni Bhavan for self-reliance and self-reliance of the sisters. In which basic and advanced courses of beauty parlour, mehndi, sewing and nail art are conducted for sisters of all castes without any caste discrimination at a very nominal fee. In this class, training is provided by highly experienced teacher sisters from 1 pm to 5 pm which is a suitable time for each sister.",
+  "Upsc-Gpsc-paragraf":"Competitive Exams conducted by Samast Patidar Samaj Trust UPSC/GPSC Training Center like GPSC Class 1/2 for Deputy Collector, Dy.SP, Mamlatdar, TDO, District Registrar, Police Inspector(PI), Deputy Mamlatdar, Deputy Section Officer, State Head Clerk, Senior Clerk, Senior Clerk, Assistant Development Officer, Non-Secretary Clerk, Office Assistant, Talati and PSI, Police Constables taken by Police Recruitment Board in CCE (combined competitive examination) as per new examination system in Tax Inspector and other Class-3. Preparations are made for etc. These classes are also provided with separate reading room facilities for brothers and sisters with all the latest facilities. Our organization is run pan-caste as said by Sardar Sahib “I am a man who has forgotten all caste-caste fences”. Students willing to join this competitive training center of our institute can fill the online form on our institute website or visit the center in person for registration.",
 
    "government-heading":"Name of Scheme",
+   
 
    "government-subheading1":"Country Loan",
    "government-subheading2":"Educational Loans",
@@ -140,6 +151,96 @@
    "government-subheading5":"Navodaya Yojana",
 
    "government-adress":"Venue- Smt. MM Kheni Bhavan, Ambatlavadi, Katargam, Surat, managed by Samast Patidar Samaj Trust. Contact Mobile Number:- Office",
-   "government-nomber":"( 8238644455 )"
+   "government-nomber":"( 8238644455 )",
+
+   "skill-title1":"Advance Mehndi course",
+   "skill-title2":"Basic mehndi course",
+
+   "skill-duration1":"Time : 2 Month, Daily 2 Hours",
+   "skill-desc1":"Making Mehndi Con, Pencil",
+   "skill-desc2":"Work, Mehndi Work",
+
+   "reading-paragraf":"A survey of students who have studied by reading in the library has been conducted since 2010. If you have read in this library then please cooperate by filling the details in this",
+   "reading-encer":"Past Library Student Registration Form",
+
+   "upsc-gpscNote":"Note- Students who wish to get guidance for competitive exams must be accompanied by a mandatory guardian.",
+   "upsc-gpscName1":"Manager Mr.:- Divyeshbhai Gabani",
+   "upsc-gpscName2":"Contact Mobile Number:- Office",
+   "upscgpsc-adress":"Venue- Smt. MM Kheni Bhavan, Ambatlavadi, Katargam, Surat, managed by Samast Patidar Samaj Trust.",
+   "upsc-gpscnumber1":"(84605-47284)",
+   "upsc-gpscnumber2":"(81417-29713)",
+
+   "education1":"Loans for higher studies of needy students of Patidar society.",
+   "education2":"Assistance provided without a single rupee of interest.",
+   "education3":"Help for all graduate level Medical, Engineering, BBA, BCA, B.COM etc.",
+   "education4":"Loan repayment facility after completion of studies.",
+
+   "occasion1":"An event hall that can be afforded by rich as well as middle class families.",
+   "occasion2":"The facility of both AC and non AC halls in the building.",
+   "occasion3":"Availability of all equipment required for the occasion at one place. E.g. Tables, chairs, pillows, utensils and kitchen facilities.",
+   "occasion4":"Hall equipped with CCTV.",
+   "occasion5":"Adequate cleaning system.",
+   "occasion6":"Experienced and cooperative staff.",
+   "occasion7":"AC conference hall for meetings of 70 to 80 people.",
+   "occasion8":"Adequate arrangements for vehicle parking",
+   "occasion9":"Arya Samaj marriage facility for people of every community.",
+   "occasion10":"Marriage at a nominal cost of Rs 2600 only.",
+   "occasion11":"Facilitate marriage without undue expenditure or wastage of money",
+   "occasion12":"A marriage certificate is also issued.",
+   "occasion13":"Catering at nominal rates.",
+   "occasion14":"Facilitation of 4 simultaneous weddings and 16 weddings throughout the day.",
+
+   "occasion-title":"Arya Samaj marriage system",
+
+   "news-articles":"News & Articles",
+
+   "newsPaper-Text1":"15 AUGUST 2023-08-17",
+   "newsPaper-Text2":"15 AUGUST_FRONTLINE 2023-08-17",
+   "newsPaper-Text3":"DHABAKAR 02-11-2023 SHIKSHAN NIDHI SAHAY",
+   "newsPaper-Text4":"DIVYABHASKAR 02-11-2023 SHIKSHAN NIDHI SAHAY",
+   "newsPaper-Text5":"Epaper_38_2023-06-08_7",
+   "newsPaper-Text6":"KAUSHALYA VIKAS BHASKAR 2023-07-01",
+
+   "events-mainheading":"Our Events",
+
+   "events-title1":"Garbh Sanskar Prashikshan Karyakram",
+   "events-title2":"Mobile in life or life in mobile",
+   "events-title3":"Skill Development Center – Certificate Presentation",
+   "events-title4":"15th August “Flag Salute Program”",
+   "events-title5":"Government Scheme Public Awareness Programme",
+   "events-title6":"Divyang Training Centre",
+
+   "pastEvents-mainheading":"Our Past Events",
+
+   "pastEvents-title1":"75th Republic Day Celebration",
+   "pastEvents-title2":"Ayodhya Shree Ramlalla Murty Pratishtha Ceremony",
+   "pastEvents-title3":"Badshah Sukanya Bond Scheme",
+   "pastEvents-title4":"Mahaladu programme",
+   "pastEvents-title5":"Isolation Center",
+   "pastEvents-title6":"Cyber Crime Programme",
+
+   "gallry-main-heading":"Gallery",
+
+   "contact-mainheading":"Contact Us",
+
+   "getinToch-subheading":"Contact Us",
+   "getinToch-heading":"Get In Touch",
+
+   "ourlocation":"Our Location",
+   "location-adrees":"Mrs. M. M. Kheni Bhawan, Opposite Ankur School, Ambatlavadi, Katargam, Surat.",
+   "phonenumber":"Phone Number",
+   "phone-number":"+918238744455",
+   "emailaddress":"Email Address",
+
+   "inquiry-subheading":"Inquiry",
+   "inquiry-heading":"Leave A Message",
+
+   "inquiry-btn":"Send Message",
+
+   "form-placeholder1":"Your name",
+   "form-placeholder2":"Your Email",
+   "form-placeholder3":"Write your message"
+
+   
 
 }

@@ -37,6 +37,7 @@ module.exports = {
         banner2: "url('/src/assets/banner2.png')",
         banner3: "url('/src/assets/banner3.webp')",
         cuverImage: "url('/src/assets/rotten-curve-1.png')",
+        getintouch: "url('/src/assets/getintoch.jpg')",
       },
       keyframes:{
         zoomIn:{

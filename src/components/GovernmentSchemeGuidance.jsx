@@ -59,10 +59,18 @@ const { t } = useTranslation();
     },
 ];
 
+const videoUrls = [
+        "https://www.youtube.com/embed/2QjfpyxwTMI?si=8IVb8po3vKaaDxR5",
+        "https://www.youtube.com/embed/kpWjfaplPE0?si=gobh7BGqlp1ijWsC",
+        "https://www.youtube.com/embed/eHOcSu_mtFg?si=2iiQRvC8HZTfDIp3",
+        "https://www.youtube.com/embed/eHOcSu_mtFg?si=2iiQRvC8HZTfDIp3",
+        "https://www.youtube.com/embed/6Td0zvi-mfE?si=VN2yWMoXYQKuv4Sy",
+        "https://www.youtube.com/embed/KHYXbmtbCJg?si=OLOKsJt_OqsEAYx0"
+    ];
 
     return (
         <>
-            <div className="w-full  mx-auto pb-[100px]">
+            <div className="w-full  mx-auto pb-[50px] md:pb-[100px]">
                 <div className="container">
                     <div className="row">
                         <div>
@@ -107,38 +115,23 @@ const { t } = useTranslation();
                                     </li>
                                 </ul>
                                 <span>{t('government-adress')} <a href="#" className='text-Primary'>{t('government-nomber')}</a></span>
-                                <div className="w-full mt-10 px-4">
+                               <div className="w-full mt-10 px-4">
                                     <div className="flex flex-wrap -mx-3 justify-center">
-                                        <div className="w-full md:w-6/12 lg:w-4/12 px-3 mb-6">
-                                            <div className="aspect-video overflow-hidden">
-                                                <iframe className="w-full h-full" src="https://www.youtube.com/embed/2QjfpyxwTMI?si=8IVb8po3vKaaDxR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        {videoUrls.map((url, index) => (
+                                            <div key={index} className="w-full md:w-6/12 lg:w-4/12 md:px-3 mb-6">
+                                                <div className="aspect-video overflow-hidden">
+                                                    <iframe
+                                                        className="w-full h-full"
+                                                        src={url}
+                                                        title={`YouTube video player ${index + 1}`}
+                                                        frameBorder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        referrerPolicy="strict-origin-when-cross-origin"
+                                                        allowFullScreen
+                                                    ></iframe>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="w-full md:w-6/12 lg:w-4/12 px-3 mb-6">
-                                            <div className="aspect-video overflow-hidden">
-                                                <iframe className="w-full h-full" src="https://www.youtube.com/embed/kpWjfaplPE0?si=gobh7BGqlp1ijWsC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                        <div className="w-full md:w-6/12 lg:w-4/12 px-3 mb-6">
-                                            <div className="aspect-video overflow-hidden">
-                                               <iframe className="w-full h-full" src="https://www.youtube.com/embed/eHOcSu_mtFg?si=2iiQRvC8HZTfDIp3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                        <div className="w-full md:w-6/12 lg:w-4/12 px-3 mb-6">
-                                            <div className="aspect-video overflow-hidden">
-                                               <iframe className="w-full h-full" src="https://www.youtube.com/embed/eHOcSu_mtFg?si=2iiQRvC8HZTfDIp3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                         <div className="w-full md:w-6/12 lg:w-4/12 px-3 mb-6">
-                                            <div className="aspect-video overflow-hidden">
-                                               <iframe className="w-full h-full" src="https://www.youtube.com/embed/6Td0zvi-mfE?si=VN2yWMoXYQKuv4Sy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                         <div className="w-full md:w-6/12 lg:w-4/12 px-3 mb-6">
-                                            <div className="aspect-video overflow-hidden">
-                                             <iframe className="w-full h-full" src="https://www.youtube.com/embed/KHYXbmtbCJg?si=OLOKsJt_OqsEAYx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
