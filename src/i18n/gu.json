@@ -237,7 +237,19 @@
 
    "form-placeholder1":"તમારું નામ",
    "form-placeholder2":"તમારું ઇમેઇલ",
-   "form-placeholder3":"તમારો સંદેશ લખો"
+   "form-placeholder3":"તમારો સંદેશ લખો",
+
+    "login-heading":"સમસ્ત પાટીદાર સમાજ ટ્રસ્ટમાં આપનું સ્વાગત છે",
+   "login-subheading":"સમસ્ત પાટીદાર સમાજ ટ્રસ્ટમાં સાઇન ઇન કરો",
+    "login-email":"ઇમેઇલ આઈડી",
+    "login-password":"પાસવર્ડ",
+    "login-submit":"સબમિટ કરો",
+
+    "create-account":"ખાતું બનાવો",
+    "forgot-password":"તમારો પાસવર્ડ ભૂલી ગયા છો?",
+
+    "copy-right":"© 2025. વિકસિત",
+    "riofos":"રિયોફોસ ટેક્નોલોજીસ પ્રા. લિ."
 
    
 

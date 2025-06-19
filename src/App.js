@@ -19,6 +19,7 @@ import EventsPage from './page/EventsPage';
 import PastEventsPage from './page/PastEventsPage';
 import GalleryPage from './page/GalleryPage';
 import ContactPage from './page/ContactPage';
+import Login from './page/Login';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
       <Route path='/events/past-events' element={<PastEventsPage />} />
       <Route path='/gallry' element={<GalleryPage />} />
       <Route path='/contactus' element={<ContactPage />} />
+      <Route path='/login' element={<Login />} />
     </Routes>
     <Footer />
     </>

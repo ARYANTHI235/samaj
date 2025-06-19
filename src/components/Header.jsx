@@ -31,6 +31,14 @@ const Header = () => {
         }
     }, []);
 
+     useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 200);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const toggleSubmenu = (label) => {
         setSubmenuOpen((prev) => ({ ...prev, [label]: !prev[label] }));
     };
@@ -67,7 +75,6 @@ const Header = () => {
                     link: "/events",
                     subItems: [
                         { label: t("past-events"), link: "/events/past-events" },
-                        { label: t("future-events"), link: "" },
                     ],
                 },
                 { label: t('news&articles'), link: '/news-articles' },
@@ -97,71 +104,41 @@ const Header = () => {
                                         <ul className='flex items-center gap-3 ms-3'>
                                             {[BiLogoFacebook, SiYoutube, RiInstagramFill].map((Icon, idx) => (
                                                 <li key={idx}>
-                                                    <Link>
-                                                        <Icon className='text-white' />
-                                                    </Link>
+                                                    <Link><Icon className='text-white' /></Link>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
                                     <div className="flex items-center gap-4">
-
-                                        <button
-                                            className='border-r border-r-white pe-4'
-                                            onClick={() => setIsSearchOpen(true)}
-                                        >
+                                        <button onClick={() => setIsSearchOpen(true)} className='border-r border-r-white pe-4'>
                                             <IoSearch className='text-white text-[16px] sm:text-[18px]' />
                                         </button>
-
-                                        <Link className='text-white border-r border-r-white pe-4 hidden lg:block'>
-                                            {t('phone-no')}
-                                        </Link>
-                                        <Link className='text-white border-r border-r-white pe-4 hidden lg:block'>
-                                            {t('email')}
-                                        </Link>
-                                        <Link className='text-white border-r border-r-white pe-4 lg:hidden'>
-                                            <FaPhoneAlt />
-                                        </Link>
-                                        <Link className='text-white border-r border-r-white pe-4 lg:hidden'>
-                                            <IoMail />
-                                        </Link>
+                                        <Link className='text-white border-r border-r-white pe-4 hidden lg:block'>{t('phone-no')}</Link>
+                                        <Link className='text-white border-r border-r-white pe-4 hidden lg:block'>{t('email')}</Link>
+                                        <Link className='text-white border-r border-r-white pe-4 lg:hidden'><FaPhoneAlt /></Link>
+                                        <Link className='text-white border-r border-r-white pe-4 lg:hidden'><IoMail /></Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div
-                        className={`fixed inset-0 z-[999] bg-black bg-opacity-50 flex justify-center items-center transition-opacity duration-300 ${isSearchOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                            }`}
-                    >
-                        <div
-                            className={`bg-white w-[90%] sm:w-[80%] p-6 rounded-lg shadow-2xl relative transform transition-transform duration-500 ${isSearchOpen ? 'translate-y-0' : '-translate-y-20'
-                                }`}
-                        >
-                            <button
-                                className="absolute top-2 right-2 text-black text-lg"
-                                onClick={() => setIsSearchOpen(false)}
-                            >
-                                ✕
-                            </button>
+
+                    <div className={`fixed inset-0 z-[999] bg-black bg-opacity-50 flex justify-center items-center transition-opacity duration-300 ${isSearchOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                        <div className={`bg-white w-[90%] sm:w-[80%] p-6 rounded-lg shadow-2xl relative transform transition-transform duration-500 ${isSearchOpen ? 'translate-y-0' : '-translate-y-20'}`}>
+                            <button onClick={() => setIsSearchOpen(false)} className="absolute top-2 right-2 text-black text-lg">✕</button>
                             <h2 className='text-center text-xl font-semibold mb-4'>{t('Search')}</h2>
-                            <input
-                                type="text"
-                                placeholder={t('placeholder-Search')}
-                                className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none"
-                            />
+                            <input type="text" placeholder={t('placeholder-Search')} className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none" />
                         </div>
                     </div>
                 </div>
             </section>
-            <header>
-                <div className=" bg-white shadow-md h-[80px] flex items-center">
+
+            <header className={`transition-all duration-300 ${isScrolled ? 'sticky top-0 z-[999] bg-white shadow-lg' : ''}`}>
+                <div className="h-[80px] flex items-center">
                     <div className="container">
                         <div className="w-full flex items-center justify-between">
                             <div className="header_image">
-                                <Link to="/">
-                                    <img src={logo} alt="logo" className="h-12" />
-                                </Link>
+                                <Link to="/"><img src={logo} alt="logo" className="h-12" /></Link>
                             </div>
 
                             <div className="header_navlink hidden lg:block relative z-50">
@@ -170,31 +147,23 @@ const Header = () => {
                                         <li key={idx} className="relative group">
                                             {(item.subItems || item.submenuItems) ? (
                                                 <div className="relative group">
-                                                    <span className="flex items-center gap-1 cursor-pointer">
-                                                        {item.label}
-                                                        <FaAngleDown />
-                                                    </span>
+                                                    <span className="flex items-center gap-1 cursor-pointer">{item.label}<FaAngleDown /></span>
                                                     <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg opacity-0 scale-y-0 origin-top transform transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-100 z-50">
                                                         {item.subItems && item.subItems.map((sub, subIdx) => (
                                                             <li key={subIdx} className="px-4 py-2 hover:bg-gray-100">
                                                                 {sub.action ? (
-                                                                    <button onClick={sub.action} className="w-full text-left">
-                                                                        {sub.label}
-                                                                    </button>
+                                                                    <button onClick={sub.action} className="w-full text-left">{sub.label}</button>
                                                                 ) : (
                                                                     <Link to={sub.link}>{sub.label}</Link>
                                                                 )}
                                                             </li>
                                                         ))}
-
                                                         {item.submenuItems && item.submenuItems.map((submenu, subIdx) => (
                                                             <li key={subIdx} className="relative group/submenu px-4 py-2 hover:bg-gray-100">
                                                                 {submenu.subItems ? (
                                                                     <>
                                                                         <div className="flex items-center justify-between cursor-pointer">
-                                                                            <Link to={submenu.link} className="flex-1">
-                                                                                {submenu.label}
-                                                                            </Link>
+                                                                            <Link to={submenu.link} className="flex-1">{submenu.label}</Link>
                                                                             <FaAngleDown className="ml-2" />
                                                                         </div>
                                                                         <ul className="absolute left-full top-0 mt-0 ml-1 w-56 bg-white shadow-lg opacity-0 scale-y-0 origin-top-left transform transition-all duration-300 group-hover/submenu:opacity-100 group-hover/submenu:scale-y-100 z-50">
@@ -220,21 +189,13 @@ const Header = () => {
                                 </ul>
                             </div>
 
-                            <Link
-                                to="/login"
-                                className="relative overflow-hidden border border-Primary text-Primary font-semibold tracking-wider leading-none rounded-full px-8 py-4 hidden lg:inline-block group"
-                            >
+                            <Link to="/login" className="relative overflow-hidden border border-Primary text-Primary font-semibold tracking-wider leading-none rounded-full px-8 py-4 hidden lg:inline-block group">
                                 <span className="absolute inset-0 bg-Primary transform translate-x-full transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
-                                <span className="relative z-10 text-Primary group-hover:text-white transition-colors duration-300 ease-in-out">
-                                    {t("login-reg")}
-                                </span>
+                                <span className="relative z-10 text-Primary group-hover:text-white transition-colors duration-300 ease-in-out">{t("login-reg")}</span>
                             </Link>
 
                             <div className="hamburger-menu flex items-center gap-2 lg:hidden">
-                                <button
-                                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                                    className="text-xl border border-black p-2 rounded-md"
-                                >
+                                <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-xl border border-black p-2 rounded-md">
                                     {mobileMenuOpen ? <FaTimes /> : <FaBars />}
                                 </button>
                             </div>
@@ -247,10 +208,7 @@ const Header = () => {
                                         <li key={idx}>
                                             {item.subItems ? (
                                                 <>
-                                                    <button
-                                                        onClick={() => toggleSubmenu(item.label)}
-                                                        className="w-full flex items-center justify-between py-2 border-b border-gray-200"
-                                                    >
+                                                    <button onClick={() => toggleSubmenu(item.label)} className="w-full flex items-center justify-between py-2 border-b border-gray-200">
                                                         <span>{item.label}</span>
                                                         <FaAngleDown className={`transition-transform ${submenuOpen[item.label] ? 'rotate-180' : ''}`} />
                                                     </button>
@@ -259,13 +217,9 @@ const Header = () => {
                                                             {item.subItems.map((sub, subIdx) => (
                                                                 <li key={subIdx}>
                                                                     {sub.action ? (
-                                                                        <button onClick={sub.action} className="block py-2 w-full text-left border-b border-gray-200">
-                                                                            {sub.label}
-                                                                        </button>
+                                                                        <button onClick={sub.action} className="block py-2 w-full text-left border-b border-gray-200">{sub.label}</button>
                                                                     ) : (
-                                                                        <Link to={sub.link} className="block py-2 border-b border-gray-200">
-                                                                            {sub.label}
-                                                                        </Link>
+                                                                        <Link to={sub.link} className="block py-2 border-b border-gray-200">{sub.label}</Link>
                                                                     )}
                                                                 </li>
                                                             ))}
@@ -273,18 +227,13 @@ const Header = () => {
                                                     )}
                                                 </>
                                             ) : (
-                                                <Link to={item.link} className="block py-2 border-b border-gray-200">
-                                                    {item.label}
-                                                </Link>
+                                                <Link to={item.link} className="block py-2 border-b border-gray-200">{item.label}</Link>
                                             )}
                                         </li>
                                     ))}
                                     <li className="flex justify-center">
-                                        <Link
-                                            to="/login"
-                                            className="bg-Primary text-white py-2 px-4 rounded-full text-sm mt-2"
-                                        >
-                                            Login / Reg.
+                                        <Link to="/" className="bg-Primary text-white py-2 px-4 rounded-full text-sm mt-2">
+                                            {t("login-reg")}
                                         </Link>
                                     </li>
                                 </ul>

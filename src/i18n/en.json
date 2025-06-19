@@ -239,7 +239,19 @@
 
    "form-placeholder1":"Your name",
    "form-placeholder2":"Your Email",
-   "form-placeholder3":"Write your message"
+   "form-placeholder3":"Write your message",
+
+   "login-heading":"Welcome To Samast Patidar Samaj Trust",
+   "login-subheading":"Sign in to Samast Patidar Samaj Trust",
+    "login-email":"Email Id",
+    "login-password":"Password",
+    "login-submit":"Submit",
+
+    "create-account":"Create an account",
+    "forgot-password":"Forgot your password?",
+
+    "copy-right":"© 2025. Developed By",
+    "riofos":"Riofos Technologies PVT. LTD."
 
    
 

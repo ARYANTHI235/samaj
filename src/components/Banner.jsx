@@ -54,21 +54,21 @@ const Banner = () => {
         heading: t('banner-heading1'),
         subHeading: t('sub-heading1'),
         buttonText: t('login-registration'),
-        buttonLink: '/'
+        buttonLink: '/login'
     },
     {
         bgClass: 'bg-banner2',
         heading: t('banner-heading2'),
         subHeading: t('sub-heading2'),
         buttonText: t('login-registration'),
-        buttonLink: '/'
+        buttonLink: '/login'
     },
     {
         bgClass: 'bg-banner3',
         heading: t('banner-heading2'),
         subHeading: t('sub-heading2'),
         buttonText: t('login-registration'),
-        buttonLink: '/'
+        buttonLink: '/login'
     }
 ];
 
