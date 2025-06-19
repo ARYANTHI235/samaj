@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import login from '../assets/login.png'
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Login = () => {
+       const { t } = useTranslation();
     const [showPassword, setShowPassword] = useState(false);
 
     return (
