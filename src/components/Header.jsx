@@ -78,7 +78,7 @@ const Header = () => {
                     ],
                 },
                 { label: t('news&articles'), link: '/news-articles' },
-                { label: t('gallery'), link: '/gallry' },
+                { label: t('gallery'), link: '/gallery' },
                 { label: t('contactus'), link: '/contactus' },
             ]
         },
@@ -147,7 +147,7 @@ const Header = () => {
                                         <li key={idx} className="relative group">
                                             {(item.subItems || item.submenuItems) ? (
                                                 <div className="relative group">
-                                                    <span className="flex items-center gap-1 cursor-pointer">{item.label}<FaAngleDown /></span>
+                                                    <span className="flex items-center gap-1 cursor-pointer ">{item.label}<FaAngleDown /></span>
                                                     <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg opacity-0 scale-y-0 origin-top transform transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-100 z-50">
                                                         {item.subItems && item.subItems.map((sub, subIdx) => (
                                                             <li key={subIdx} className="px-4 py-2 hover:bg-gray-100">

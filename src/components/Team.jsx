@@ -177,7 +177,7 @@ const Team = () => {
                                         <div className="Image">
                                             <img src={member.image} alt={member.name} />
                                         </div>
-                                        <div className="content p-5 text-center bg-white group-hover:bg-Primary group-hover:text-white transition-all duration-200">
+                                        <div className="content border border-solid border-Primary p-5 text-center bg-white group-hover:bg-Primary group-hover:text-white transition-all duration-200">
                                             <h5 className='text-[14px] md:text-[18px] font-Secondry'>{member.name}</h5>
                                             <span className='text-[#999999] uppercase font-Primary text-[12px] md:text-[14px]'>{member.role}</span>
                                         </div>

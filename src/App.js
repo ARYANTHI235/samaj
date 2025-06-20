@@ -40,7 +40,7 @@ function App() {
       <Route path='/news-articles' element={<NewsAndArticlesPage />} />
       <Route path='/events' element={<EventsPage />} />
       <Route path='/events/past-events' element={<PastEventsPage />} />
-      <Route path='/gallry' element={<GalleryPage />} />
+      <Route path='/gallery' element={<GalleryPage />} />
       <Route path='/contactus' element={<ContactPage />} />
       <Route path='/login' element={<Login />} />
     </Routes>
