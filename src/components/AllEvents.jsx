@@ -10,7 +10,6 @@ import { useTranslation } from 'react-i18next';
 
 
 const AllEvents = () => {
-
     const { t } = useTranslation();
 
     const events = [
